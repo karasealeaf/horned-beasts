@@ -1,29 +1,16 @@
 import "./App.css";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import Gallery from "./Gallery.jsx";
-
-const imgArr = [];
+import Header from "./components/Header";
+import Gallery from "./components/Gallery";
+import beastArr from "./data.json";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app">
-      <header />
-      <div className="imgContainer">
-        {imgArr.map((e) => {
-          return (
-            <>
-              <Gallery
-                title={e.title}
-                imgURL={e.image_URL}
-                desc={e.description}
-              />
-            </>
-          );
-        })}
-      </div>
-      <footer />
-    </div>
+    <>
+      <Header className="Header"/>
+      <Gallery beasts={beastArr} />
+      <Footer className="Footer"/>
+    </>
   );
 }
 
