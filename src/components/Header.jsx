@@ -1,8 +1,7 @@
-export default function Header () {
-
+export default function Header() {
   return (
-    <>
-      <h1>Horned Beasts</h1>
-    </>
+    <header>
+      <h1>Horned Beasties</h1>
+    </header>
   );
 }

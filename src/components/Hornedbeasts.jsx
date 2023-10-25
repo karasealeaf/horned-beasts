@@ -1,6 +1,6 @@
-//import beastArr from "./data.json";
+import { useState } from "react";
 
-export default function Hornedbeasts({ title, img_url, description }) {
+export default function Hornedbeasts({ title, image_url, description }) {
   const [likes, setLikes] = useState(0);
 
   function handleLikes() {
@@ -9,7 +9,7 @@ export default function Hornedbeasts({ title, img_url, description }) {
   return (
     <div>
       <h2>{title}</h2>
-      <img src={img_url} alt={title} onClick={handleLikes}/>
+      <img src={image_url} alt={title} onClick={handleLikes} />
       <span>❤️{likes}</span>
       <p>{description}</p>
     </div>

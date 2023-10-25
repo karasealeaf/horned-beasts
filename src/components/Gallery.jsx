@@ -1,17 +1,17 @@
-import Hornedbeasts from "../components/Hornedbeasts";
-import beastArr from "../data";
+import Hornedbeasts from "./Hornedbeasts";
+import data from "./data.json";
 
 export default function Gallery() {
   return (
     <>
       <div className="beasties">
-        {beastArr.map((beast) => {
+        {data.map((beast) => {
           return (
             <Hornedbeasts
-              id={beast._id}
-              image={beast.image_url}
-              description={beast.description}
+              key={beast._id}
               title={beast.title}
+              image_url={beast.image_url}
+              description={beast.description}
             />
           );
         })}
